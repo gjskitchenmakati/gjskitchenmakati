@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      .wrapper{
+        width:100%;
+        max-height: 1500px;
+        text-align: center;
+        margin: auto;
+        background: url('BG.jpg') no-repeat center /cover;
+        overflow: auto;
+      }
+      .logodiv {
+        width: 12%;
+        float: left;
+        overflow: hidden;
+      }
+      .logo1 {
+        max-width: 100%;
+        height: auto;
+        transition: transform .2s;
+      }
+      .logo1:hover {
+        background-color: transparent;
+        transform: scale(1.1);
+      }
+      .linknav {
+        width: 80%;
+        height: 50px;
+        float: right;
+        background-color: #ffc913;
+        border-bottom-left-radius: 20px;
+        overflow: hidden;
+      }
+      .link {
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+      }
+      .linknav a {
+        float: left;
+        text-align: center;
+        font-family: "Copperplate", fantasy;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+      }
+      .linknav a:hover {
+        color: black;
+        display: block;
+        cursor: pointer;
+      }
+      .container {
+        float: right;
+      }
+      #cartbtn {
+        background-color: #ffc913;
+        border: none;
+      }
+      #cartbtn:hover {
+        cursor: pointer;
+      }
+      #cart {
+        height: 48px;
+      }
+      .dropdown {
+        overflow: hidden;
+        float: right;
+      }
+      .dropdown .dropbtn {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        margin: 0;
+        font-family: "Copperplate", fantasy;
+      }
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+        cursor: pointer;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+        z-index: 1;
+        right: 0;
+      }
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .container2 {
+        width: 100%;
+        height: 500px;
+        margin-top: 175px;
+      }
+      #contact {
+        width: 35%;
+        height: 400px;
+        background-color: white;
+        float: left;
+        margin-left: 25px;
+        border: 2px solid #ffc913;
+        font-size: 20px;
+        text-align: justify;
+        padding: 0px 25px 0px 12px;
+      }
+      .link2 {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Brush Script MT', cursive;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        font-size: 25px;
+      }
+      #map {
+        float: right;
+        width: 50%;
+        height: 500px;
+        margin-right: 25px;
+        border: 2px solid #ffc913;
+        background-color: white;
+        text-align: center;
+        font-size: 16px;
+      }
+      #myImg {
+        width: 98%;
+        height: 450px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #myImg:hover {opacity: 0.7;}
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 100%;
+        max-width: 700px;
+      }
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+      }
+      @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+      .footer {
+        width: 100%;
+        height: 140px;
+        background-color: #ffc913;
+      }
+      .para {
+        width: 43%;
+        height: auto;
+        float: left;
+        font-size: 17px;
+        text-align: justify;
+        padding-left: 18px;
+      }
+      .icon {
+        width: 55%;
+        float: right;
+      }
+      .iconn {
+        padding: 25px 25px 30px 30px;
+        width: 13%;
+        height: 67px;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="logodiv">
+          <a href="HOME.html"><img src="Logo.png" alt="Logo" class="logo1"></a>
+        </div>
+        <div class="linknav">
+          <a href="ABOUTUS.html" class="link">ABOUT US</a>
+          <a href="CONTACTUS.html" class="link">CONTACT US</a>
+          <a href="REVIEWS.html" class="link">REVIEWS</a>
+          <div class="container">
+            <button id="cartbtn" onclick="location.href=('#')"><img src="buy.png" alt="Cart" id="cart"></button>
+            <div class="dropdown">
+              <button class="dropbtn">PRODUCTS &#9660;
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">SNACKS</a>
+                <a href="#">BILAO OFFERS</a>
+                <a href="#">BUNDLES</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div id="contact">
+          <h1 style="font-family: 'Brush Script MT', cursive;"><center>Contact Us thru:</center></h1>
+          <p>Facebook:     <a class="link2" href="https://www.facebook.com/gjskitchenmakati">G & J's Kitchen</a>
+            <br>
+            Instagram:    <a class="link2" href="https://www.instagram.com/gjskitchenmakati">@gjskitchenmakati</a>
+            <br><br>
+            Phone:<b> 0917 412 6497</b>
+          </p>
+        </div>
+        <div id="map">
+          <figure>
+            <img id="myImg" src="location.png" alt="Store Map">
+            <div id="myModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption"></div>
+            </div>
+            <script>
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            </script>
+            <figcaption>5125 Col. Santos St., South Cembo, 1214 Makati City, Metro Manila, Philippines</figcaption>
+          </figure>
+        </div>
+      </div>
+      <br>
+      <div class="footer">
+        <div class="para">
+          <p><b>"With a goal to satisfy anyone's cravings, G & J's Kitchen aims to deliver on people's expectations of what good food made with love tastes like!"</b><br>
+          Est, 2020<br>
+          All images and information in this website are owned by G & J's Kitchen and were taken with their permission.</p>
+        </div>
+        <div class="icon">
+          <a href="https://www.facebook.com/gjskitchenmakati"><img src="fb.png" class="iconn" alt="fb"></a>
+          <a href="https://www.instagram.com/gjskitchenmakati/"><img src="instagram.png" class="iconn" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
